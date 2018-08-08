@@ -8,8 +8,18 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="board" id="board">
+	<!--<div class="board" id="board" >  --> 
+  <div class="screen screen-start" id="start">
+
   <header>
+          <h1>Tic Tac Toe</h1>
+          <a href="#" class="button">Start game</a>
+  </header>
+  </div>
+
+
+    <div class="board"id="board">
+    <header>
     <h1>Tic Tac Toe</h1>
     <ul>
       <li class="players" id="player1">
@@ -21,16 +31,21 @@
     </ul>
   </header>
   <ul class="boxes">
-    <li class="box"></li>
-    <li class="box"></li>
-    <li class="box"></li>
-    <li class="box"></li>
-    <li class="box"></li>
-    <li class="box"></li>
-    <li class="box"></li>
-    <li class="box"></li> 
-    <li class="box"></li>
-  </ul>
-</div>
+    <li class="box" id="box1"></li>
+    <li class="box" id="box2" ></li>
+    <li class="box" id="box3"></li>
+    <li class="box" id="box4"></li>
+    <li class="box" id="box5"></li>
+    <li class="box" id="box6"></li>
+    <li class="box" id="box7"></li>
+    <li class="box" id="box8"></li> 
+    <li class="box" id="box9"></li>
+  </ul> 
+ </div><!-- end board -->
+
+<!--</div>   end orginal id board  -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
