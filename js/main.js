@@ -1,3 +1,4 @@
+!function(){
 //variables
 
 const board = document.getElementById("board");
@@ -245,3 +246,6 @@ const reset = () => {
         }
     }
 }
+
+
+}();
