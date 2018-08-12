@@ -30,11 +30,9 @@ startButton[0].addEventListener("click", (event) => {
     board.style.display = "block";
     player1.classList.add("class", "active");
 });
-for (let m = 2; m < boxli.length; m++) {
-    boxli[m].addEventListener("mouseenter", enterListener);
-}
 
-function enterListener(currentTarget) {
+//helper function for mouseleave
+let enterListener = function enterListener(event) {
     let hoverbox = event.currentTarget;
     if (player1.classList.contains("active")) {
         hoverbox.style.backgroundImage = "url(./img/o.svg)";
@@ -43,17 +41,23 @@ function enterListener(currentTarget) {
         hoverbox.style.backgroundImage = "url(./img/x.svg)";
         hoverbox.style.backgroundImage.display = "block";
     }
+
 }
+
+//listener for mounse enter
+for (let m = 2; m < boxli.length; m++) {
+    boxli[m].addEventListener("mouseenter", enterListener);
+
+}
+
 //listener to replay
 newgame.addEventListener("click", (event) => {
     reset();
 })
-//add individual event listener so that individual ones can be removed
-for (let n = 2; n < boxli.length; n++) {
-    boxli[n].addEventListener("mouseleave", leaveListener);
-}
 
-function leaveListener(currentTarget) {
+
+// helper for leave listener
+let leaveListener = function leaveListener(event) {
     let hoverbox = event.currentTarget;
     if (player1.classList.contains("active")) {
         if (!hoverbox.classList.contains("box-filled-1") || !hoverbox.classList.contains("box-filled-2")) {
@@ -69,6 +73,11 @@ function leaveListener(currentTarget) {
         }
     }
 }
+//listnerer for mouseleave
+for (let n = 2; n < boxli.length; n++) {
+    boxli[n].addEventListener("mouseleave", leaveListener);
+}
+
 let tracknoughtsandcrosses = true;
 //listener on boxes for gameplay (on the ul)
 for (let k = 2; k < boxli.length; k++) {
