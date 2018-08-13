@@ -67,8 +67,6 @@ let leaveListener = function leaveListener(event) {
         }
     } else if (player2.classList.contains("active")) {
         if (!hoverbox.classList.contains("box-filled-1") || !hoverbox.classList.contains("box-filled-2")) {
-            console.log(!hoverbox.classList.contains("box-filled-1"));
-            console.log(!hoverbox.classList.contains("box-filled-2"));
             hoverbox.style.backgroundImage.display = "none";
             hoverbox.style.backgroundImage = "";
         }
